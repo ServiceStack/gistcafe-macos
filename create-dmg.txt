@@ -1,0 +1,3 @@
+https://kb.parallels.com/123895
+
+Open Disk Utility > File > New Image > Image from Folder << scripts
