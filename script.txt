@@ -1,0 +1,32 @@
+on open location this_URL
+	try
+		if not FileExists("/usr/local/share/dotnet/dotnet") then
+			display dialog ("Install .NET 5 SDK?") buttons {"Cancel", "OK"}
+			if button returned of result = "OK" then
+				do shell script "open 'https://dotnet.microsoft.com/download/dotnet/5.0'"
+			end if
+			return
+		end if
+		
+		set HOME to system attribute "HOME"
+		if not FileExists(HOME & "/.dotnet/tools/x") then
+			do shell script "/usr/local/share/dotnet/dotnet tool install -g x"
+		end if
+		
+		do shell script HOME & "/.dotnet/tools/x " & this_URL
+		
+	on error errStr number errorNumber
+		display dialog "Error: " & errStr & " number " & " errorNumber " & errorNumber
+	end try
+	
+end open location
+
+on FileExists(theFile) -- (String) as Boolean
+	tell application "System Events"
+		if exists file theFile then
+			return true
+		else
+			return false
+		end if
+	end tell
+end FileExists

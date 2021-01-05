@@ -66,24 +66,11 @@
 		<key>name</key>
 		<string>ScriptWindowState</string>
 		<key>positionOfDivider</key>
-		<real>419</real>
+		<real>371</real>
 		<key>savedFrame</key>
-		<string>20 190 1209 678 0 0 1440 875 </string>
+		<string>20 196 700 678 0 0 1440 875 </string>
 		<key>selectedTab</key>
 		<string>description</string>
 	</dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>cafe.gist</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>gist</string>
-			</array>
-		</dict>
-	</array>	
 </dict>
 </plist>
