@@ -93,7 +93,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
 
-        _ = shell("\(xPath.relativePath) \(urls[0])")
+        _ = shell("\(xPath.relativePath) \"\(urls[0])\"")
     }
 
 }
