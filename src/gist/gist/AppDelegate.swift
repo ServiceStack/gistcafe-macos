@@ -77,9 +77,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func application(_ application: NSApplication, open urls: [URL]) {
         if !FileManager().fileExists(atPath: "/usr/local/share/dotnet/dotnet") {
-            let answer = dialogOKCancel(question: "Install .NET 5 SDK?", text: "")
+            let answer = dialogOKCancel(question: "Install .NET 6 SDK?", text: "")
             if answer {
-                _ = shell("open 'https://dotnet.microsoft.com/download/dotnet/5.0'")
+                _ = shell("open 'https://dotnet.microsoft.com/download/dotnet/6.0'")
                 return
             }
         }
